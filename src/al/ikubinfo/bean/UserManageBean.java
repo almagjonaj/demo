@@ -7,10 +7,11 @@ import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.ViewScoped;
+import javax.faces.context.FacesContext;
+import javax.inject.Inject;
 
 import al.ikubinfo.service.Aaa;
 import al.ikubinfo.service.UserService;
-import al.ikubinfo.service.UserServiceImpl;
 
 
 @ManagedBean(name = "userManageBean")
@@ -31,6 +32,8 @@ public class UserManageBean {
 
 	@PostConstruct
 	public void init() {
+		FacesContext context = FacesContext.getCurrentInstance();
+
 		System.out.println("Init 0..."+aaa);
 		System.out.println("Init 1..."+userService);
 

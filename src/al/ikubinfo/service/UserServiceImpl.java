@@ -5,7 +5,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import al.ikubinfo.entity.User;
 
-
+@Service
 public class UserServiceImpl implements UserService {
 
 	@Override
